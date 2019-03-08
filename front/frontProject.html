@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="./myStyle.css"/>	
+		<title>FrontProject</title>
+	</head>
+	<body>
+		<header>
+			<img src="">
+		</header>
+		<h1>VmgLogApi</h1>
+		<form action="./affichageLog.js">
+			<!--Titre du formulaire-->
+			<p id="nameForm">Type de log recherché</p>
+			<!--Choix du type de log-->
+			<label>TCP<input type="radio" name="typeLog" value="tcp" class="typeOfLog"></label>
+			<label>SSH<input type="radio" name="typeLog" value="ssh" class="typeOfLog"></label>
+			<label>DHCP<input type="radio" name="typeLog" value="dhcp" class="typeOfLog"></label>
+			<br>
+			<!--bouton de validation de recherche-->
+			<input type="submit" name="submit" value="Valider" id="buttonSubmit">
+		</form>
+	</body>
+</html>
