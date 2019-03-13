@@ -4,13 +4,11 @@
 		<meta charset="utf-8">
 		<link rel="stylesheet" type="text/css" href="./myStyle.css"/>	
 		<title>FrontProject</title>
+		<script type="text/javascript" src="./affichageLog.js"></script>
 	</head>
 	<body>
-		<header>
-			<img src="">
-		</header>
 		<h1>VmgLogApi</h1>
-		<form action="./affichageLog.js">
+		<form onsubmit="event.preventDefault(); affichageLog()" id="formLog" method="POST">
 			<!--Titre du formulaire-->
 			<p id="nameForm">Type de log recherché</p>
 			<!--Choix du type de log-->
@@ -21,5 +19,10 @@
 			<!--bouton de validation de recherche-->
 			<input type="submit" name="submit" value="Valider" id="buttonSubmit">
 		</form>
+		<br>
+		<br>
+		<span id="spanLogs">
+			<!--Ajout des logs via le script JS-->
+		</span>
 	</body>
 </html>
