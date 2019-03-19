@@ -1,6 +1,7 @@
 function affichageLog(){
 	var typeLog = document.querySelector("input[name='typeLog']:checked").value;
 	var myHeaders = new Headers();
+	var p;
 
 	var myInit = {
 		method: 'POST',
@@ -23,12 +24,13 @@ function affichageLog(){
 		while(listLogs.firstChild){
 			listLogs.removeChild(listLogs.firstChild);
 		}
-		var p = document.createElement('p');
+		//var p = document.createElement('p');
 
 		/*p.innerText = 'truyugsd';
 		p.classList.add('test');
 		listLogs.appendChild(p);*/
 		for(var i=0; i < myLogs.length; i++){
+			p = document.createElement('p');
 			p.innerText = myLogs[i].id + ': ' + myLogs[i].contentLog;
 			listLogs.appendChild(p);
 			//codeHTML +='<p>' + myLogs[i].id + ': ' + myLogs[i].contentLog + '</p><br/>';
