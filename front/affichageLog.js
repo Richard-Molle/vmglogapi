@@ -20,6 +20,9 @@ function affichageLog(){
 	.then(function(myLogs) {
 		//var codeHTML = "";
 		var listLogs=document.getElementById('spanLogs');
+		while(listLogs.firstChild){
+			listLogs.removeChild(listLogs.firstChild);
+		}
 		var p = document.createElement('p');
 
 		/*p.innerText = 'truyugsd';
