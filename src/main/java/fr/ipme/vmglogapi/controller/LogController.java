@@ -38,7 +38,7 @@ public class LogController {
         Pattern p = Pattern.compile(".*"+typeLog+".*");    /////////////////////////////////////////////
         for (int i=0; i<logs.size();i++){
             log = logs.get(i);
-            m= p.matcher(log.getContentLog());
+            m= p.matcher(log.getSyslogtag());
             if (m.find()){
                 listLog.add(log);
             }

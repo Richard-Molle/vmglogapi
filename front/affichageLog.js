@@ -31,7 +31,7 @@ function affichageLog(){
 		listLogs.appendChild(p);*/
 		for(var i=0; i < myLogs.length; i++){
 			p = document.createElement('p');
-			p.innerText = myLogs[i].id + ': ' + myLogs[i].contentLog;
+			p.innerText = myLogs[i].id + ': ' + myLogs[i].message;
 			listLogs.appendChild(p);
 			//codeHTML +='<p>' + myLogs[i].id + ': ' + myLogs[i].contentLog + '</p><br/>';
 			
