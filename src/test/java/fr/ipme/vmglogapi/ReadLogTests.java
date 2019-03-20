@@ -15,6 +15,7 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertSame;
 
 @RunWith(SpringRunner.class)
@@ -40,7 +41,7 @@ public class ReadLogTests {
     @Test
     public void ajoutList(){
         List<Log> listLog = new ArrayList<>();
-        listLog=logController.list();//readLogs("");
-        assertSame(logController.list(),listLog);
+        listLog=logController.readLogs("");
+        assertEquals(logController.list(),listLog);
     }
 }
