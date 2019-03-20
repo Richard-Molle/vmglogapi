@@ -28,17 +28,12 @@ public class ReadLogTests {
 
     //recherche de la chaine voulue
     @Test
-    public boolean regexTest(){
+    public void regexTest(){
         Matcher m;
         Pattern p = Pattern.compile(".*ssh.*");
 
         m=p.matcher("lblblblblsshblblblbl");
-        if (m.find()){
-            return true;
-        }
-        else {
-            return false;
-        }
+        assertSame(true,m.find());
     }
 
     @Test
