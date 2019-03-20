@@ -1,4 +1,4 @@
-package fr.ipme.vmglogapi;
+/*package fr.ipme.vmglogapi;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -9,8 +9,8 @@ import org.springframework.test.context.junit4.SpringRunner;
 @SpringBootTest
 public class VmglogapiApplicationTests {
 
-	/*@Test
+	@Test
 	public void contextLoads() {
-	}*/
+	}
 
-}
+}*/
