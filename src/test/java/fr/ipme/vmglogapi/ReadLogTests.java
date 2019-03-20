@@ -40,7 +40,7 @@ public class ReadLogTests {
     @Test
     public void ajoutList(){
         List<Log> listLog = new ArrayList<>();
-        listLog=logController.readLogs("");
+        listLog=logController.list();//readLogs("");
         assertSame(logController.list(),listLog);
     }
 }
