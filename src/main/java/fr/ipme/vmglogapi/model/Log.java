@@ -11,76 +11,77 @@ import java.sql.Date;
 public class Log {
 
     @Id
+    @Column(name = "ID")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column
+    @Column(name = "CustomerID")
     private Integer customerid;
 
-    @Column
+    @Column(name = "ReceivedAt")
     private Date receivedat;
 
-    @Column
+    @Column(name = "DeviceReportedTime")
     private Date devicereportedtime;
 
-    @Column
+    @Column(name = "Facility")
     private Integer facility;
 
-    @Column
+    @Column(name = "Priority")
     private Integer priority;
 
-    @Column
+    @Column(name = "FromHost")
     private String fromHost;
 
-    @Column
+    @Column(name = "Message")
     private String message;
 
-    @Column
+    @Column(name = "NTSeverity")
     private Integer ntseverity;
 
-    @Column
+    @Column(name = "Importance")
     private Integer importance;
 
-    @Column
+    @Column(name = "EventSource")
     private String eventsource;
 
-    @Column
+    @Column(name = "EventUser")
     private String eventuser;
 
-    @Column
+    @Column(name = "EventCategory")
     private Integer eventcategory;
 
-    @Column
+    @Column(name = "EventID")
     private Integer eventid;
 
-    @Column
+    @Column(name = "EventBinaryData")
     private String eventbinarydata;
 
-    @Column
+    @Column(name = "MaxAvailable")
     private Integer maxavailable;
 
-    @Column
+    @Column(name = "CurrUsage")
     private Integer currusage;
 
-    @Column
+    @Column(name = "MinUsage")
     private Integer minusage;
 
-    @Column
+    @Column(name = "MaxUsage")
     private Integer maxusage;
 
-    @Column
+    @Column(name = "InfoUnitID")
     private Integer infounitid;
 
-    @Column
+    @Column(name = "SysLogTag")
     private String syslogtag;
 
-    @Column
+    @Column(name = "EventLogType")
     private String eventlogtype;
 
-    @Column
+    @Column(name = "GenericFileName")
     private String genericfilename;
 
-    @Column
+    @Column(name = "SystemID")
     private Integer systemid;
 
     public Log() {
