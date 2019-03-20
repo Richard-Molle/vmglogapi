@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.regex.Matcher;
@@ -38,7 +39,7 @@ public class ReadLogTests {
 
     @Test
     public void ajoutList(){
-        List<Log> listLog = new LinkedList<>();
+        List<Log> listLog = new ArrayList<>();
         listLog=logController.readLogs("");
         assertSame(logController.list(),listLog);
     }
