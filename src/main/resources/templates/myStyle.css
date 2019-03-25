@@ -1,0 +1,34 @@
+body {
+	background-color: #333333;
+}
+h1{
+	font-size: 21;
+	color: white;
+	text-align: center;
+}
+form{
+	border-radius: 5px;
+	border-width: 2px;
+	border: solid;
+	background-color: #999999;
+	margin: 10px;
+	padding: 10px;
+}
+#nameForm{
+	text-align: center;
+}
+.typeOfLog{
+	margin-right: 20%;
+}
+#spanLogs{
+	border-radius: 5px;
+	border-width: 2px;
+	border: solid;
+	margin: 10px;
+	padding: 10px;
+	background-color: #999999;
+	display: block;
+}
+#url{
+	margin-right: 10%;
+}

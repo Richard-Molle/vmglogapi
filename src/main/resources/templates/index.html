@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="./myStyle.css"/>	
+		<title>FrontProject</title>
+		<script type="text/javascript" src="./affichageLog.js"></script>
+	</head>
+	<body>
+		<h1>VmgLogApi</h1>
+		<form onsubmit="event.preventDefault(); affichageLog()" id="formLog" method="POST">
+			<!--Titre du formulaire-->
+			<p id="nameForm">Type de log recherché</p>
+			<br>
+			<!--Renseignement de l'URL et du port-->
+			<label>URL<input type="text" name="url" id="url" placeholder="localhost"></label>
+			<label>port<input type="text" name="port" id="port" placeholder="8080"></label>
+			<br>
+			<!--Choix du type de log-->
+			<label>rsyslog<input type="radio" name="typeLog" value="rsyslog" class="typeOfLog"></label>
+			<label>dhclient<input type="radio" name="typeLog" value="dhclient" class="typeOfLog"></label>
+			<label>systemd<input type="radio" name="typeLog" value="systemd" class="typeOfLog"></label>
+			<br>
+			<!--bouton de validation de recherche-->
+			<input type="submit" name="submit" value="Valider" id="buttonSubmit">
+		</form>
+		<br>
+		<br>
+		<span id="spanLogs">
+			<!--Ajout des logs via le script JS-->
+		</span>
+	</body>
+</html>
