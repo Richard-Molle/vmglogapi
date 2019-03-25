@@ -11,6 +11,11 @@
 		<form onsubmit="event.preventDefault(); affichageLog()" id="formLog" method="POST">
 			<!--Titre du formulaire-->
 			<p id="nameForm">Type de log recherché</p>
+			<br>
+			<!--Renseignement de l'URL et du port-->
+			<label>URL<input type="text" name="url" id="url" placeholder="localhost"></label>
+			<label>port<input type="text" name="port" id="port" placeholder="8080"></label>
+			<br>
 			<!--Choix du type de log-->
 			<label>rsyslog<input type="radio" name="typeLog" value="rsyslog" class="typeOfLog"></label>
 			<label>dhclient<input type="radio" name="typeLog" value="dhclient" class="typeOfLog"></label>

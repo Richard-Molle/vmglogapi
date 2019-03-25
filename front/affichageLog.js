@@ -9,8 +9,8 @@ function affichageLog(){
 //		mode: 'no-cors'
 	};
 
-	var myRequest = new Request('http://localhost:8080/api/logs/' + typeLog, myInit);
-
+//	var myRequest = new Request('http://localhost:8080/api/logs/' + typeLog, myInit);
+	var myRequest = new Request('http://' + document.getElementById('url').value + ':' + document.getElementById('port').value + '/api/logs/' + typeLog, myInit);
 
     fetch(myRequest, myInit)
 	// .then(function(response){ //response => response.json())
