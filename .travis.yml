@@ -3,7 +3,6 @@ jdk:
         - oraclejdk8
 before_install:
         - mysql -e 'CREATE DATABASE syslog'
-        - cp src/main/resources/application.test.properties src/main/resources/application.properties
 install:
         - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
 services:
