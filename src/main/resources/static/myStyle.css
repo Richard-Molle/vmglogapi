@@ -21,14 +21,32 @@ form{
 	margin-right: 20%;
 }
 #spanLogs{
+    width: 35%;
 	border-radius: 5px;
 	border-width: 2px;
 	border: solid;
 	margin: 10px;
 	padding: 10px;
 	background-color: #999999;
-	display: block;
+	display: inline-block;
 }
 #url{
 	margin-right: 10%;
+}
+.test{
+    text-shadow: 2px 2px 4px;
+}
+#spanDetail{
+    margin-left: 10px;
+    width: 35%;
+	border-radius: 5px;
+	border-width: 2px;
+	border: solid;
+	margin: 10px;
+	padding: 10px;
+	background-color: #999999;
+	display: inline-block;
+}
+#logs{
+    display: inline table;
 }

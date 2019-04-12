@@ -1,42 +1,54 @@
+tab = [];
 function affichageLog(){
 	var typeLog = document.querySelector("input[name='typeLog']:checked").value;
 	var myHeaders = new Headers();
-	var p;
+	var listLogsSelect;
+	var listId = [];
+	var listElement = [];
 
 	var myInit = {
 		method: 'POST',
 		header: myHeaders
-//		mode: 'no-cors'
 	};
 
-//	var myRequest = new Request('http://localhost:8080/api/logs/' + typeLog, myInit);
 	var myRequest = new Request('http://' + document.getElementById('url').value + ':' + document.getElementById('port').value + '/api/logs/' + typeLog, myInit);
 
     fetch(myRequest, myInit)
-	// .then(function(response){ //response => response.json())
-	// .then(response => response.json())
+
 	.then(function(response) {
 		return response.json();
 	})
 	.then(function(myLogs) {
-		//var codeHTML = "";
 		var listLogs=document.getElementById('spanLogs');
+		var detailLog = document.getElementById('spanDetail');
 		while(listLogs.firstChild){
 			listLogs.removeChild(listLogs.firstChild);
 		}
-		//var p = document.createElement('p');
+		while(detailLog.firstChild){
+        	detailLog.removeChild(detailLog.firstChild);
+        }
 
-		/*p.innerText = 'truyugsd';
-		p.classList.add('test');
-		listLogs.appendChild(p);*/
 		for(var i=0; i < myLogs.length; i++){
-			p = document.createElement('p');
-			p.innerText = myLogs[i].id + ': ' + myLogs[i].msg;
-			listLogs.appendChild(p);
-			//codeHTML +='<p>' + myLogs[i].id + ': ' + myLogs[i].contentLog + '</p><br/>';
-			
+			let p = document.createElement('div');
+			let p2 = document.createElement('p');
+
+			p.id=i;
+
+			p2.innerText = myLogs[i].msg;
+            p.innerText = myLogs[i].id + ': ';
+
+			p.addEventListener("click", function (event) {
+				describeLog(myLogs[p.id]);
+				//console.log(p.value);
+			});
+
+
+			p.appendChild(p2);
+            listLogs.appendChild(p);
+
+
+			tab.push(p);
 		}
-		//listLogs.innerHTML= codeHTML;
 	})
 //	.catch(err => {
 //  		console.log(err);
